@@ -25,7 +25,7 @@ hub_name                 : "" # The name of your JupyterHub (used for the button
 hub_type                 : binder # ['binder', 'jupyterhub']  Whether to build interact links for a BinderHub or a JupyterHub
 textbook_repo_base       : https://github.com/  # The site on which the textbook repository is hosted
 textbook_repo_org        : COGS18  # The username or organization that owns this repository
-textbook_repo_name       : Assignments  # The name of the repository on the web
+textbook_repo_name       : assignments  # The name of the repository on the web
 textbook_repo_branch     : master # The branch on which your textbook is hosted.
 number_chapters          : false  # Whether to number the chapers in the sidebar for the textbook
 chapter_titles           : true  # Whether to include the title of the chapter at the top of each chapter
