@@ -8,7 +8,7 @@ name                     : "Tom Donoghue"
 description              : ""
 url                      : https://cogs18.github.io/Assignments # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog". Defaults to "/"
-repository               : #COGS108/Tutorials # GitHub username/repo-name for this site
+repository               : # GitHub username/repo-name for this site
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 footer                   : false # Whether to include a footer with the built site
 masthead                 : true  # Whether to include a masthead (header/navbar) with the site.
@@ -16,8 +16,8 @@ masthead_logo            : images/logo/logo.png
 
 # Button settings
 add_interact_button      : false  # Whether to add a button link to an interactive version of the notebook
-add_download_button      : true  # Whether to add a button link to download a copy of the notebook
-add_pdf_button           : true  # Whether to add a button link to pdf copies of the notebooks
+add_download_button      : false  # Whether to add a button link to download a copy of the notebook
+add_pdf_button           : false  # Whether to add a button link to pdf copies of the notebooks
 
 # Textbook settings
 hub_url                  : https://mybinder.org # The URL for your JupyterHub/BinderHub.

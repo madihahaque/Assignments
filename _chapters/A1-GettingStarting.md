@@ -1,6 +1,4 @@
 ---
-download_link: assets/downloads/A1-GettingStarting.ipynb.zip
-pdf_link: assets/pdf/A1-GettingStarting.pdf
 title: 'A1-gettingstarting'
 permalink: '/chapters/A1-GettingStarting'
 previouschapter:
@@ -11,7 +9,6 @@ nextchapter:
   title: ''
 redirect_from:
   - '/chapters/a1-gettingstarting'
-  - '/'
 ---
 
 # COGS 18 - Assignment 1: Getting Started
