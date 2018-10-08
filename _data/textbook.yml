@@ -4,6 +4,6 @@ chapters:
   title: Home
   url: /
 - class: level_0
-  title: A1-gettingstarting
-  url: /chapters/A1-GettingStarting
-first_chapter_url: /chapters/A1-GettingStarting
+  title: A1-gettingstarted
+  url: /chapters/A1-GettingStarted
+first_chapter_url: /chapters/A1-GettingStarted

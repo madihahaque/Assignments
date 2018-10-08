@@ -1,1 +1,1 @@
-* [A1-gettingstarting](./notebooks/A1-GettingStarting.ipynb)
+* [A1-gettingstarted](./notebooks/A1-GettingStarted.ipynb)
