@@ -1,6 +1,4 @@
-# Ignore notes files
-*.rtf
-# Ignore word files in development
-*.pages
+# Ignore site build
+_site/*
 # Ignore notebook checkpoint files
 */.ipynb_checkpoints/*
