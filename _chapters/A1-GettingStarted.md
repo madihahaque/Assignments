@@ -1,4 +1,5 @@
 ---
+download_link: assets/downloads/A1-GettingStarted.ipynb.zip
 title: 'A1-gettingstarted'
 permalink: '/chapters/A1-GettingStarted'
 previouschapter:
@@ -15,22 +16,26 @@ redirect_from:
 
 This assignment covers Variables, Operators & Conditionals.
 
-This assignment is out of 6 points, worth 6% of your grade. 
-
-NOTE: assignment currently unavailable for download as we finish bug-checking. Check back soon. 
+This assignment is out of 6 points, worth 6% of your grade.
 
 ## How to complete assignments
 
 Whenever you see:
 
-YOUR CODE HERE <br>
+```
+# YOUR CODE HERE
 raise NotImplementedError()
+```
 
 You need to replace this section with some code that answers the questions and meets the specified criteria. Make sure you remove the 'raise' line when you do this (or your notebook will raise an error, regardless of any other code, and thus fail the grading tests).
+
+You should write the answer to the questions in those cells (the ones with `# YOUR CODE HERE`), but you can also add extra cells to explore / investigate things if you need / want to. 
 
 Any cell with 'assert' statements in it is a test cell. You should not try to change or delete these cells. Note that there might be more than one assert that tests a particular question. 
 
 If a test does fail, reading the error that is printed out should let you know which test failed, which may be useful for fixing it.
+
+Note that some cells, including the test cells, may be read only, which means they won't let you edit them. If you cannot edit a cell - that is normal, and you shouldn't need to edit that cell.
 
 ## Tips & Tricks
 
@@ -40,7 +45,7 @@ The following are a couple tips & tricks that may help you if you get stuck on a
 
 A reminder that you can (and should) print and check variables as you go.
 
-This allows you to check what values they hold, and fix things if anything unexpected happens
+This allows you to check what values they hold, and fix things if anything unexpected happens.
 
 
 
@@ -114,7 +119,7 @@ Create the following variables:
 - a variable called `number` that stores the value 23
 - a variable called `decimal` that stores the value 12.5
 - a variable called `word` that stores the value 'cogs18'
-- a variable called `truth` that stores the value 12.5
+- a variable called `truth` that stores the value True
 
 
 
@@ -212,7 +217,7 @@ raise NotImplementedError()
 ```python
 ## TESTS FOR Q2  [Note: Includes Hidden Tests]
 
-assert isinstance(ans_1, float)
+assert isinstance(ans_1, int)
 
 ```
 
@@ -280,7 +285,7 @@ assert str_output == "Python is fun!"
 
 ### Q4 - Boolean Comparisons (0.5 points)
 
-Using variables provided, do following boolean logical comparisons:
+Using the variables provided, do the following boolean logical comparisons:
 - Define `bool_comp_1` to be the logical `and` of `bool_1` and `bool_2`
 - Define `bool_comp_2` to be the logical `or` of  `bool_1` and `bool_2`
 
@@ -325,9 +330,11 @@ assert isinstance(bool_comp_2, bool)
 
 ### Q5 - Value Comparisons (0.5 points)
 
-Value comparisons:
+Do the following value comparisons:
 - Check if the value stored in `comp_val_1` is less than or equal to the value stored in `comp_val_2`
     - Store the result of this comparison to variable called `comp_1`
+
+
 - Check if the value stored in `comp_val_3` is not equal to (is different from) the value stored in `comp_val_4`
     - Store the result of this comparison to variable called `comp_2`
 
@@ -375,6 +382,10 @@ assert isinstance(comp_2, bool)
 ## Part III - Conditionals
 
 ### Q6 - Conditionals With Booleans (0.5 points)
+
+Write a conditional that tests a boolean variable `status`, specifically:
+- if `status` evaluates as `True`, set the variable `output` as the string "GOOD"
+- else (meaning `status` must evaluate as `False`), set the variable `output` as the string "BAD"
 
 
 
@@ -425,9 +436,11 @@ Consider a case in which you are running an experiment, with multiple groups of 
 Based on the subjects age group, you want to do a different analysis - specifically if they are in the old group.
 
 Write a conditional with an `if` and an `else`:
-- The `if` should check if the variable `subj_age` has the value `old`.
-    - If so, it should set the variable `change_analysis` to the value `True`
-- Else, the variable `change_analysis` should be set to False
+- The `if` should check if the variable `subj_age` has the value `'old'` (a string).
+    - If so, it should set the variable `change_analysis` to the value `True` (a boolean)
+    
+    
+- Else, the variable `change_analysis` should be set to False (a boolean)
 
 
 
@@ -475,9 +488,9 @@ assert isinstance(change_analysis, bool)
 ```
 
 
-### Q8 - Conditionals With Multiple Options
+### Q8 - Conditionals With Multiple Options (0.5 points)
 
-Sometimes we may need to check multiple conditions, with many (more than two) possible outcomes.
+Sometimes we may need to check multiple conditions, with many (more than two) possibilities.
 
 Create a conditional with the following outline:
 - If `check_1` and `check_2` variables are both True, it should set the value of a variable `outcome` to the string 'BOTH'
@@ -563,13 +576,27 @@ assert outcome == 'NEITHER'
 
 ## Part IV - Putting it all together
 
-### Q9 - stuff
+### Q9 - Multiple Cases: Experiment Example (1 point)
 
-Lets revisit the setup of Q7 - in which we wanted to set a variable to indicate if a subject in an experiment was in a particular group, and thus required different processing. In this question we will extent that premise, by writing a set of conditionals to mark an interaction between subject's age and score. 
+Lets revisit the setup of Q7 - in which we wanted to set a variable to indicate if a subject in an experiment was in a particular group, and thus required different processing. In this question we will extend that premise, by writing a set of conditionals to mark an interaction between subject's age and score. 
 
+For example, it is common for behavioural performance to decrease with age. However, some subjects do not seem to show this behavioural deficit with age. Investigating such 'super-ages' could be useful for learning about the cognitive decline of aging.
 
-
-
+Write a conditional that does the following:
+- If the variable `subj_age` has the value `old` and the variable `score` is greater than 25:
+    - set the variable `subj_status` to the string 'Super Ager'
+    
+    
+- Elif the variable `subj_age` has the value `old` and the variable `score` is less than or equal to 25:
+    - set the variable `subj_status` to the string 'Normal Ager'
+    
+    
+- Elif the variable `subj_age` has the value `young` and the variable `score` is greater than 25:
+    - set the variable `subj_status` to the string 'Normal Youth'
+    
+    
+- Elif the variable `subj_age` has the value `young` and the variable `score` is less than or equal to 25:
+    - set the variable `subj_status` to the string 'Bad Youth'
 
 
 
@@ -644,6 +671,25 @@ assert subj_status == 'Bad Youth'
 
 
 ### Q10 - Creating a Calculator (1 point)
+
+Finally we will write a flexible calculater program, that performs multiple operations (addition, subtraction, multiplication and division) on pairs of numbers. To do so, the code will use a string variable `operation` that indicates with operation to perform, and two numerical values, `num1` and `num2`, upon which the operation is performed. The calculator will assign the output of it's calculation to a variable called `answer`. 
+
+To create this calculater, we will be using conditionals. 
+
+In particular, create a calculator such that:
+- if `operation` has the value 'add', then `answer` gets set as the sum of `num1` and `num2`
+- elif `operation` has the value 'subtract', then `answer` gets set as the substraction of `num2` from `num2`
+- elif `operation` has the value 'multiply', then `answer` gets set as the multiplication of `num1` and `num2`
+- elif `operation` has the value 'divide', then `answer` gets set as the division of `num1` by `num2`
+
+For an example, with the following variables to start with:
+
+```
+operation = 'multiply'
+num1 = 2
+num2 = 3
+```
+We should expect our program to execute and set the variable `answer` to be `6`.
 
 
 
@@ -730,3 +776,9 @@ operation = 'not a thing'
 assert answer == None
 ```
 
+
+## The End!
+
+This is the end of the assignment!
+
+Have a look back over your answers, and also make sure to `Restart & Run All` from the kernel menu to double check that everything is working properly. When you are ready to submit your assignment, upload it to TritonED under Assignment-1.

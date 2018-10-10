@@ -16,7 +16,7 @@ masthead_logo            : images/logo/logo.png
 
 # Button settings
 add_interact_button      : false  # Whether to add a button link to an interactive version of the notebook
-add_download_button      : false  # Whether to add a button link to download a copy of the notebook
+add_download_button      : true  # Whether to add a button link to download a copy of the notebook
 add_pdf_button           : false  # Whether to add a button link to pdf copies of the notebooks
 
 # Textbook settings
